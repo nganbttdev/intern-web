@@ -1,0 +1,50 @@
+<nz-sider
+  nzCollapsible
+  nzWidth="256px"
+  nzBreakpoint="md"
+  [(nzCollapsed)]="isCollapsed"
+  [nzTrigger]="null"
+  class="menu-sidebar"
+>
+  <div class="sidebar-logo flex items-center space-x-2 px-4 py-2">
+    <img src="assets/logo/fis-logo.svg" alt="logo">
+    <h1 class="text-white text-lg font-semibold">Intern Web</h1>
+  </div>
+
+  <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+    <li nz-submenu nzOpen nzTitle="Bài tập" nzIcon="read">
+      <ul>
+        <li nz-menu-item [routerLink]="['/mon-1']">Môn 1</li>
+        <li nz-menu-item [routerLink]="['/mon-2']">Môn 2</li>
+        <li nz-menu-item [routerLink]="['/mon-3']">Môn 3</li>
+      </ul>
+    </li>
+
+    <li nz-menu-item [routerLink]="['/thong-bao']">
+      <i nz-icon nzType="bell"></i>
+      <span>Thông báo</span>
+    </li>
+
+    <li nz-submenu nzOpen nzTitle="Thống kê" nzIcon="appstore">
+      <ul>
+        <li nz-menu-item [routerLink]="['/diem-so']">Điểm số</li>
+        <li nz-menu-item [routerLink]="['/diem-danh']">Điểm danh</li>
+      </ul>
+    </li>
+
+    <li nz-menu-item [routerLink]="['/ho-so']">
+      <i nz-icon nzType="user"></i>
+      <span>Hồ sơ cá nhân</span>
+    </li>
+
+    <li nz-menu-item [routerLink]="['/cai-dat']">
+      <i nz-icon nzType="setting"></i>
+      <span>Cài đặt</span>
+    </li>
+
+    <li nz-menu-item [routerLink]="['/dang-xuat']">
+      <i nz-icon nzType="logout"></i>
+      <span>Đăng xuất</span>
+    </li>
+  </ul>
+</nz-sider>

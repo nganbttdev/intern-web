@@ -1,0 +1,21 @@
+<div class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header Component -->
+  <header class="bg-white border-b border-gray-200 shadow-sm">
+    <app-header></app-header>
+  </header>
+
+  <!-- Layout body -->
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar Component -->
+    <aside class="bg-white text-white overflow-y-auto shadow-lg">
+      <app-sidebar></app-sidebar>
+    </aside>
+
+    <!-- Content Component -->
+    <main class="flex-1 overflow-y-auto bg-gray-100 p-2">
+      <div class="bg-white rounded-lg shadow p-4">
+        <app-content></app-content>
+      </div>
+    </main>
+  </div>
+</div>
